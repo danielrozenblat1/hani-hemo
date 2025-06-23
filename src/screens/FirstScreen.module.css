@@ -1,0 +1,647 @@
+/* Import Amatic SC Font */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+/* Mobile Layout */
+.container, .containerP {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Desktop Layout - 3 Columns */
+.desktopContainer, .desktopContainerP {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.leftColumn, .rightColumn {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.centerColumn {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.sideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Shared Styles for Both Mobile and Desktop Center Column */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.activeSlide {
+  opacity: 1;
+}
+
+.inactiveSlide {
+  opacity: 0;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.activeSlide .image {
+  transform: scale(1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+.overlayContainer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 6rem;
+}
+
+.textContainer {
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  transform: translateY(80px);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.textContainer.initialLoad {
+  animation: slideUpFromBottom 1400ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 300ms;
+}
+
+.textContainer.loaded {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.brandInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brandTitle {
+  font-family: 'Aboreto', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.8),
+    0 2px 6px rgba(0, 0, 0, 0.6),
+    0 1px 3px rgba(0, 0, 0, 0.4);
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+
+.brandDescription {
+  font-family: 'HeeboR', Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  text-align: center;
+  line-height: 1.5;
+  text-shadow: 
+    0 3px 8px rgba(0, 0, 0, 0.8),
+    0 2px 4px rgba(0, 0, 0, 0.6);
+  direction: rtl;
+  letter-spacing: 0.5px;
+  max-width: 320px;
+}
+
+.activeSlide .textContainer {
+  /* ביטול האפקט - הטקסט נשאר במקום לאחר האנימציה הראשונית */
+}
+
+@keyframes slideUpFromBottom {
+  0% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.activeSlide .textContainer {
+  /* הטקסט לא זז עוד - נשאר במקום קבוע לאחר האנימציה הראשונית */
+}
+
+/* Scroll Down Indicator */
+.scrollIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  animation: scrollPulse 2.5s ease-in-out infinite;
+}
+
+.scrollIndicator:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.scrollIcon {
+  width: 35px;
+  height: 55px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.scrollArrow {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  animation: scrollBounce 2.5s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.scrollText {
+  font-family: 'HeeboR', Arial, sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  direction: rtl;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    top: 12px;
+    opacity: 1;
+  }
+  50% {
+    top: 30px;
+    opacity: 0.7;
+  }
+}
+
+/* Floating Action Buttons */
+.floatingButtons {
+  position: absolute;
+  bottom: 6rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  z-index: 20;
+}
+
+.floatingBtn {
+  padding: 1rem 1.2rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  /* Glass Effect */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(15px) saturate(120%);
+  -webkit-backdrop-filter: blur(15px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    0 4px 10px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.floatingBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 12px 35px rgba(0, 0, 0, 0.4),
+    0 6px 15px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+}
+
+.floatingBtn:active {
+  transform: translateY(0);
+}
+
+.phoneIcon {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.projectsText {
+  font-family: 'HeeboR', Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  direction: rtl;
+  white-space: nowrap;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.indicator {
+  width: 3rem;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1px;
+}
+
+.activeIndicator {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scaleX(1.2);
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3);
+}
+
+.indicator:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Hide desktop layout on mobile */
+  .desktopContainer, .desktopContainerP {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Hide mobile layout on desktop */
+  .container, .containerP {
+    display: none;
+  }
+
+  /* Desktop-specific adjustments for the center column */
+  .centerColumn .brandTitle {
+    font-size: 3.5rem;
+    letter-spacing: 2.5px;
+  }
+  
+  .centerColumn .brandDescription {
+    font-size: 1.4rem;
+    max-width: 350px;
+  }
+  
+  .centerColumn .textContainer {
+    max-width: 380px;
+    gap: 2.2rem;
+  }
+  
+  .centerColumn .scrollIcon {
+    width: 38px;
+    height: 58px;
+  }
+  
+  .centerColumn .scrollText {
+    font-size: 0.9rem;
+  }
+  
+  .centerColumn .floatingBtn {
+    padding: 1.1rem 1.3rem;
+    min-width: 52px;
+    min-height: 52px;
+  }
+  
+  .centerColumn .phoneIcon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .centerColumn .projectsText {
+    font-size: 0.95rem;
+  }
+  
+  .centerColumn .indicator {
+    width: 3.2rem;
+    height: 2.5px;
+  }
+}
+
+/* Large Desktop responsive adjustments */
+@media (min-width: 1025px) {
+  .centerColumn .brandTitle {
+    font-size: 4rem;
+    letter-spacing: 3px;
+  }
+  
+  .centerColumn .brandDescription {
+    font-size: 1.5rem;
+    max-width: 380px;
+  }
+  
+  .centerColumn .textContainer {
+    max-width: 420px;
+    gap: 2.5rem;
+  }
+  
+  .centerColumn .scrollIcon {
+    width: 42px;
+    height: 62px;
+  }
+  
+  .centerColumn .scrollText {
+    font-size: 1rem;
+  }
+  
+  .centerColumn .floatingBtn {
+    padding: 1.2rem 1.4rem;
+    min-width: 55px;
+    min-height: 55px;
+  }
+  
+  .centerColumn .phoneIcon {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .centerColumn .projectsText {
+    font-size: 1rem;
+  }
+  
+  .centerColumn .indicator {
+    width: 3.5rem;
+    height: 3px;
+  }
+
+  .centerColumn .overlayContainer {
+    padding-bottom: 7rem;
+  }
+  
+  .centerColumn .floatingButtons {
+    bottom: 7rem;
+    padding: 0 1.8rem;
+  }
+}
+
+/* Extra Large Desktop responsive adjustments */
+@media (min-width: 1441px) {
+  .centerColumn .brandTitle {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+  
+  .centerColumn .brandDescription {
+    font-size: 1.4rem;
+    max-width: 420px;
+  }
+  
+  .centerColumn .textContainer {
+    max-width: 460px;
+    gap: 2.8rem;
+  }
+  
+  .centerColumn .scrollIcon {
+    width: 45px;
+    height: 65px;
+  }
+  
+  .centerColumn .scrollText {
+    font-size: 1.1rem;
+  }
+  
+  .centerColumn .floatingBtn {
+    padding: 1.3rem 1.5rem;
+    min-width: 58px;
+    min-height: 58px;
+  }
+  
+  .centerColumn .phoneIcon {
+    width: 27px;
+    height: 27px;
+  }
+  
+  .centerColumn .projectsText {
+    font-size: 1.05rem;
+  }
+  
+  .centerColumn .indicator {
+    width: 3.8rem;
+    height: 3.5px;
+  }
+
+  .centerColumn .overlayContainer {
+    padding-bottom: 8rem;
+  }
+  
+  .centerColumn .floatingButtons {
+    bottom: 8rem;
+    padding: 0 2rem;
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 650px) {
+  .brandTitle {
+    font-size: 2.8rem;
+  }
+  
+  .brandDescription {
+    font-size: 1.2rem;
+    max-width: 300px;
+  }
+  
+  .textContainer {
+    width: 85%;
+    max-width: 320px;
+    gap: 1.8rem;
+  }
+  
+  .overlayContainer {
+    padding-bottom: 5.5rem;
+  }
+  
+  .indicator {
+    width: 2.5rem;
+  }
+  
+  .scrollIcon {
+    width: 32px;
+    height: 52px;
+  }
+  
+  .scrollText {
+    font-size: 0.8rem;
+  }
+  
+  .floatingBtn {
+    padding: 0.9rem 1.1rem;
+    min-width: 45px;
+    min-height: 45px;
+  }
+  
+  .phoneIcon {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .projectsText {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .brandTitle {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .brandDescription {
+    font-size: 1.1rem;
+    max-width: 280px;
+  }
+  
+  .textContainer {
+    width: 90%;
+    max-width: 300px;
+    gap: 1.5rem;
+  }
+  
+  .overlayContainer {
+    padding-bottom: 5rem;
+  }
+  
+  .indicator {
+    width: 2rem;
+  }
+  
+  .indicators {
+    bottom: 1.5rem;
+    gap: 0.8rem;
+  }
+  
+  .scrollIcon {
+    width: 30px;
+    height: 48px;
+  }
+  
+  .scrollText {
+    font-size: 0.75rem;
+  }
+  
+  .scrollArrow {
+    width: 5px;
+    height: 5px;
+    top: 10px;
+  }
+  
+  @keyframes scrollBounce {
+    0%, 100% {
+      top: 10px;
+      opacity: 1;
+    }
+    50% {
+      top: 26px;
+      opacity: 0.7;
+    }
+  }
+  
+  .floatingButtons {
+    bottom: 5.5rem;
+    padding: 0 1.2rem;
+  }
+  
+  .floatingBtn {
+    padding: 0.8rem 1rem;
+    min-width: 42px;
+    min-height: 42px;
+    border-radius: 20px;
+  }
+  
+  .phoneIcon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .projectsText {
+    font-size: 0.8rem;
+  }
+}

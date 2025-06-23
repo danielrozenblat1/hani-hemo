@@ -1,0 +1,366 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Main Wrapper */
+.statsWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background: white;
+  overflow: hidden;
+  padding: 80px 20px 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Wave Background */
+.waveBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  fill: #f8f9fa;
+  animation: waveAnimation 6s ease-in-out infinite;
+}
+
+.shapeFill {
+  fill: rgba(108, 99, 255, 0.05);
+}
+
+.wave path:nth-child(1) {
+  animation: waveAnimation 8s ease-in-out infinite;
+}
+
+.wave path:nth-child(2) {
+  animation: waveAnimation 6s ease-in-out infinite reverse;
+}
+
+.wave path:nth-child(3) {
+  animation: waveAnimation 10s ease-in-out infinite;
+}
+
+@keyframes waveAnimation {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-25px);
+  }
+}
+
+/* Stats Container */
+.statsContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 50px 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  /* Inner Shadow */
+  box-shadow: 
+    inset 0 8px 32px rgba(0, 0, 0, 0.06),
+    inset 0 -8px 32px rgba(0, 0, 0, 0.04),
+    0 20px 60px rgba(0, 0, 0, 0.08);
+  
+  /* Wave Shape */
+  clip-path: polygon(
+    0% 15%,
+    10% 0%,
+    20% 8%,
+    30% 0%,
+    40% 12%,
+    50% 0%,
+    60% 10%,
+    70% 0%,
+    80% 8%,
+    90% 0%,
+    100% 15%,
+    100% 85%,
+    90% 100%,
+    80% 92%,
+    70% 100%,
+    60% 88%,
+    50% 100%,
+    40% 90%,
+    30% 100%,
+    20% 92%,
+    10% 100%,
+    0% 85%
+  );
+}
+
+/* Individual Stat Item */
+.statItem {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  padding: 40px 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  transform: translateY(40px);
+  
+  /* Subtle inner shadow */
+  box-shadow: 
+    inset 0 4px 12px rgba(0, 0, 0, 0.03),
+    0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.statItem.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.statItem:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 
+    inset 0 6px 16px rgba(0, 0, 0, 0.04),
+    0 20px 40px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Stat Number */
+.statNumber {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: #6b6b6b;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  animation: numberGlow 3s ease-in-out infinite;
+}
+
+@keyframes numberGlow {
+  0%, 100% {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    text-shadow: 0 4px 16px rgba(108, 99, 255, 0.2);
+  }
+}
+
+/* Stat Description */
+.statDescription {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+/* Floating Particles */
+.floatingParticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(45deg, #6c63ff, #ff6384);
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: floatParticle 8s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+  top: 15%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  top: 70%;
+  right: 25%;
+  animation-delay: 2.5s;
+}
+
+.particle:nth-child(3) {
+  bottom: 20%;
+  left: 70%;
+  animation-delay: 5s;
+}
+
+@keyframes floatParticle {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.4;
+  }
+  33% {
+    transform: translateY(-15px) scale(1.2);
+    opacity: 0.7;
+  }
+  66% {
+    transform: translateY(-8px) scale(0.9);
+    opacity: 0.5;
+  }
+}
+
+/* Background Effects */
+.backgroundEffects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glowOrb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(108, 99, 255, 0.1) 0%, transparent 70%);
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+.glowOrb1 {
+  width: 200px;
+  height: 200px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.glowOrb2 {
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  right: 20%;
+  animation-delay: 2s;
+  background: radial-gradient(circle, rgba(255, 99, 132, 0.08) 0%, transparent 70%);
+}
+
+.glowOrb3 {
+  width: 150px;
+  height: 150px;
+  bottom: 20%;
+  left: 60%;
+  animation-delay: 4s;
+  background: radial-gradient(circle, rgba(54, 162, 235, 0.08) 0%, transparent 70%);
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .statsContainer {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+    clip-path: polygon(
+      0% 10%,
+      15% 0%,
+      30% 8%,
+      45% 0%,
+      60% 10%,
+      75% 0%,
+      90% 8%,
+      100% 0%,
+      100% 90%,
+      85% 100%,
+      70% 92%,
+      55% 100%,
+      40% 90%,
+      25% 100%,
+      10% 92%,
+      0% 100%
+    );
+  }
+  
+  .statItem {
+    padding: 30px 15px;
+  }
+  
+  .statNumber {
+    font-size: 2.5rem;
+  }
+  
+  .statDescription {
+    font-size: 1rem;
+  }
+  
+  .statsWrapper {
+    padding: 60px 15px 40px 15px;
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsContainer {
+    gap: 25px;
+    padding: 30px 15px;
+  }
+  
+  .statNumber {
+    font-size: 2.2rem;
+  }
+  
+  .statDescription {
+    font-size: 0.95rem;
+  }
+  
+  .statsWrapper {
+    padding: 50px 10px 30px 10px;
+    min-height: 280px;
+  }
+}
+
+/* Ensure single row on mobile */
+@media (min-width: 481px) {
+  .statsContainer {
+    flex-direction: row;
+  }
+}
+
+/* Animation entrance effects */
+.statItem:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.statItem:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.statItem:nth-child(3) {
+  animation-delay: 0.5s;
+}

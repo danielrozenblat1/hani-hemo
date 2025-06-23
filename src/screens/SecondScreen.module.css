@@ -1,0 +1,203 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&display=swap');
+
+/* Base Container - Liquid Glass Background עם צבעי עץ עדינים */
+.container {
+    width: 100%;
+
+    margin: 0;
+    padding: 3% 5%;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+    /* רקע לבן לגמרי */
+    background: #ffffff;
+    
+    border: none;
+    border-radius: 0 0 60px 60px;
+    position: relative;
+}
+
+/* Floating glass particles effect בצבעי עץ */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Parallax Background */
+.parallaxContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: -1;
+    overflow: hidden;
+}
+
+.description {
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    direction: rtl;
+    flex-grow: 1;
+}
+.title{
+        font-family: 'OpenSans', sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    direction: rtl;
+    width:80%;
+    margin:2% auto;
+    flex-grow: 1;
+}
+/* Intro Section Styles */
+.introSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 1rem;
+    padding: 0;
+    direction: rtl;
+    overflow: hidden;
+    min-height: 3.5rem;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 5;
+    max-width: 600px;
+}
+
+.introBox span {
+    font-size: 2.3rem;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 600;
+    background-clip: text;
+    letter-spacing: -1px;
+    position: relative;
+    margin: 0;
+    white-space: nowrap;
+    display: inline-block;
+    min-height: 2rem;
+    text-align: center;
+    
+    filter: drop-shadow(0 0 10px rgba(139, 69, 19, 0.15));
+    animation: liquidGlow 8s ease-in-out infinite;
+}
+
+@keyframes liquidGlow {
+    0%, 100% {
+        filter: 
+            drop-shadow(0 0 10px rgba(139, 69, 19, 0.15))
+            drop-shadow(0 0 20px rgba(160, 82, 45, 0.08));
+    }
+    33% {
+        filter: 
+            drop-shadow(0 0 15px rgba(160, 82, 45, 0.18))
+            drop-shadow(0 0 25px rgba(210, 180, 140, 0.1));
+    }
+    66% {
+        filter: 
+            drop-shadow(0 0 12px rgba(210, 180, 140, 0.16))
+            drop-shadow(0 0 22px rgba(222, 184, 135, 0.09));
+    }
+}
+
+/* Media Queries for Responsive Design */
+* {
+    box-sizing: border-box;
+}
+
+/* Less than 600px */
+@media (max-width: 599px) {
+    .introSection {
+        max-width: 320px;
+        margin: 0.5rem auto;
+    }
+    
+    .introBox span {
+        font-size: 1.6rem;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.3;
+    }
+    
+    .description {
+        font-size: 1rem;
+    }
+}
+
+/* 600px - 800px */
+@media (min-width: 600px) and (max-width: 800px) {
+    .introSection {
+        max-width: 450px;
+    }
+    
+    .introBox span {
+        font-size: 1.5rem;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.3;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+    }
+}
+
+/* 800px - 1000px */
+@media (min-width: 801px) and (max-width: 1000px) {
+    .introSection {
+        max-width: 550px;
+    }
+    
+    .introBox span {
+        font-size: 1.8rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+    
+    .description {
+        font-size: 1.2rem;
+    }
+}
+
+/* 1000px - 1200px */
+@media (min-width: 1001px) and (max-width: 1200px) {
+    .introBox span {
+        font-size: 2.1rem;
+    }
+    
+    .description {
+        font-size: 1.3rem;
+    }
+}
+
+/* 1200px - 1400px */
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .introBox span {
+        font-size: 2.2rem;
+    }
+    
+    .description {
+        font-size: 1.35rem;
+    }
+}
+
+/* 1400px and above */
+@media (min-width: 1401px) {
+    .introBox span {
+        font-size: 2.4rem;
+    }
+    
+    .description {
+        font-size: 1.4rem;
+    }
+}
