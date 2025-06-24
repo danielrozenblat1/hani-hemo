@@ -8,6 +8,7 @@ import searches from "../icons/wired-outline-19-magnifier-zoom-search-morph-cros
 import wrong from "../icons/wired-outline-731-real-estate-building-project-hover-pinch.json";
 import moneyy from "../icons/wired-outline-298-coins-hover-spending (1).json";
 import foryou from "../icons/wired-outline-781-rulers-hover-pinch.json";
+import Button from "../components/button/Button";
 
 const ThirdScreen = () => {
   const playerRef1 = useRef();
@@ -168,6 +169,7 @@ const ThirdScreen = () => {
             </div>
           </div>
         </div>
+        <Button text="חני, בואי נתאם שיחה"/>
       </div>
     </>
   );

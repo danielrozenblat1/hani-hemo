@@ -2,30 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
 
-/* CSS Variables for luxury pearl design */
+/* CSS Variables for luxury design with dark colors for light background */
 :root {
-  --primary-pearl: #E8E4E1;
-  --secondary-pearl: #F5F2F0;
-  --accent-pearl: #D4CFC8;
-  --warm-pearl: #F0EBE7;
-  --soft-pearl: #EDE8E4;
-  --pearl-shimmer: #F8F5F2;
-  --deep-charcoal: #1A1A1A;
+  --primary-dark: #1A1A1A;
+  --secondary-dark: #2D2D2D;
+  --accent-dark: #404040;
+  --warm-dark: #333333;
+  --soft-dark: #4A4A4A;
+  --text-shimmer: #1A1A1A;
+  --deep-charcoal: #000000;
   --warm-gray: #2D2D2D;
   --light-gray: #F8F8F8;
-  --glass-white: rgba(255, 255, 255, 0.08);
-  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-dark: rgba(0, 0, 0, 0.08);
+  --glass-border-dark: rgba(0, 0, 0, 0.12);
   --shadow-luxury: 0 20px 40px rgba(0, 0, 0, 0.3);
   --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.1);
-  --pearl-glow: rgba(232, 228, 225, 0.15);
-  --pearl-soft: rgba(232, 228, 225, 0.08);
+  --dark-glow: rgba(26, 26, 26, 0.15);
+  --dark-soft: rgba(26, 26, 26, 0.08);
 }
 
 /* Main carousel container - רווחים וורטיקליים מוגדלים */
 .carouselContainer {
   position: relative;
   width: 100%;
-margin:30px auto;
+  margin: 30px auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,24 +65,23 @@ margin:30px auto;
 /* Project number styling - עיצוב מחודש עם פונט יוקרתי וגודל גדול יותר */
 .projectNumber {
   display: inline-block;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
-  backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   padding: 1.5rem 2.5rem; /* הגדלנו משמעותית */
   font-family: 'Cormorant Garamond', serif; /* פונט יוקרתי חדש */
   font-size: 2.5rem; /* הגדלנו משמעותית מ-1.1rem */
   font-weight: 600;
-  color: var(--pearl-shimmer);
+  color: var(--text-shimmer);
   letter-spacing: 3px; /* הגדלנו את המרווח בין האותיות */
   margin-bottom: 2.5rem; /* הגדלנו מ-1.5rem */
   position: relative;
   overflow: hidden;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
   box-shadow: 
-    0 12px 35px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.25),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
+    0 8px 20px rgba(0, 0, 0, 0.08),
+    0 3px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -93,16 +92,15 @@ margin:30px auto;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: left 2.5s ease-in-out;
 }
 
 .projectNumber:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 
-    0 16px 45px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    0 0 0 1px rgba(255, 255, 255, 0.15);
+    0 12px 25px rgba(0, 0, 0, 0.12),
+    0 5px 12px rgba(0, 0, 0, 0.08);
 }
 
 .projectNumber:hover::before {
@@ -124,7 +122,7 @@ margin:30px auto;
   font-family: 'Assistant', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 600;
-  color: var(--primary-pearl);
+  color: var(--primary-dark);
   text-shadow: none;
   letter-spacing: 0.02em;
   margin: 0;
@@ -143,7 +141,7 @@ margin:30px auto;
 .carouselDescription {
   font-family: 'AssistantR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
   line-height: 1.6;
   font-weight: 400;
   text-align: right;
@@ -198,24 +196,21 @@ margin:30px auto;
 .buttonGlass {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.1) 100%);
-  backdrop-filter: blur(25px) saturate(200%);
-  -webkit-backdrop-filter: blur(25px) saturate(200%);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--pearl-shimmer);
+  color: var(--text-shimmer);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
   box-shadow: 
-    0 16px 45px rgba(0, 0, 0, 0.3),
-    0 6px 20px rgba(255, 255, 255, 0.15),
-    0 0 0 1px rgba(255, 255, 255, 0.3),
-    inset 0 2px 4px rgba(255, 255, 255, 0.4),
-    inset 0 -2px 2px rgba(0, 0, 0, 0.15);
+    0 6px 15px rgba(0, 0, 0, 0.1),
+    0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .buttonGlass::before {
@@ -225,7 +220,7 @@ margin:30px auto;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--pearl-glow) 0%, rgba(255, 255, 255, 0.1) 30%, transparent 70%);
+  background: linear-gradient(135deg, var(--dark-glow) 0%, rgba(0, 0, 0, 0.1) 30%, transparent 70%);
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 50%;
@@ -236,17 +231,17 @@ margin:30px auto;
 }
 
 .navButton:hover .buttonGlass {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.18) 100%);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.18) 100%);
+  border-color: rgba(0, 0, 0, 0.5);
   transform: scale(1.12);
   backdrop-filter: blur(30px) saturate(220%);
   -webkit-backdrop-filter: blur(30px) saturate(220%);
   box-shadow: 
     0 20px 55px rgba(0, 0, 0, 0.35),
-    0 8px 25px rgba(255, 255, 255, 0.2),
-    0 0 0 2px rgba(255, 255, 255, 0.4),
-    inset 0 3px 6px rgba(255, 255, 255, 0.5),
-    inset 0 -3px 3px rgba(0, 0, 0, 0.2);
+    0 8px 25px rgba(0, 0, 0, 0.2),
+    0 0 0 2px rgba(0, 0, 0, 0.4),
+    inset 0 3px 6px rgba(0, 0, 0, 0.5),
+    inset 0 -3px 3px rgba(255, 255, 255, 0.2);
 }
 
 .navButton:active .buttonGlass {
@@ -281,9 +276,9 @@ margin:30px auto;
   position: relative;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 0, 0, 0.02);
   backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   padding: 0;
   overflow: hidden;
@@ -332,9 +327,9 @@ margin:30px auto;
 }
 
 .thumbnailGlassContainer {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 0, 0, 0.02);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 25px;
   padding: 1rem;
   width: 100%;
@@ -348,25 +343,25 @@ margin:30px auto;
   position: absolute;
   top: -20px;
   right: 25px;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
   backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 25px;
   padding: 0.7rem 1.8rem;
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--pearl-shimmer);
+  color: var(--text-shimmer);
   z-index: 15;
   letter-spacing: 1.5px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.7);
   box-shadow: 
     0 10px 30px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    inset 0 1px 0 rgba(0, 0, 0, 0.15);
 }
 
 .counterNumber, .counterTotal {
-  color: var(--pearl-shimmer);
+  color: var(--text-shimmer);
   font-weight: 600;
   font-size: 1.2rem;
   font-family: 'Playfair Display', serif;
@@ -376,7 +371,7 @@ margin:30px auto;
 .counterSeparator {
   margin: 0 0.8rem;
   opacity: 0.7;
-  color: var(--accent-pearl);
+  color: var(--accent-dark);
   font-weight: 300;
   font-size: 1rem;
   font-family: 'Playfair Display', serif;
@@ -428,7 +423,7 @@ margin:30px auto;
 .thumbnailGlass {
   width: 90px; /* הגדלנו מ-70px */
   height: 65px; /* הגדלנו מ-50px */
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.03);
   backdrop-filter: blur(6px);
   border: none;
   border-radius: 8px;
@@ -438,11 +433,11 @@ margin:30px auto;
 }
 
 .thumbnail:hover .thumbnailGlass {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.06);
 }
 
 .thumbnail.active .thumbnailGlass {
-  background: var(--pearl-soft);
+  background: var(--dark-soft);
 }
 
 .thumbnailImage {
@@ -460,7 +455,7 @@ margin:30px auto;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), transparent);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
   transition: all 0.3s ease;
 }
 
@@ -470,7 +465,7 @@ margin:30px auto;
   left: 0;
   right: 0;
   bottom: 0;
-  border: 1px solid var(--accent-pearl);
+  border: 1px solid var(--accent-dark);
   border-radius: 8px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -503,7 +498,7 @@ margin:30px auto;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -524,7 +519,7 @@ margin:30px auto;
   left: 50%;
   width: 0;
   height: 0;
-  background: var(--primary-pearl);
+  background: var(--primary-dark);
   border-radius: 50%;
   transition: all 0.3s ease;
   transform: translate(-50%, -50%);
@@ -536,7 +531,7 @@ margin:30px auto;
 }
 
 .progressDot:hover {
-  background: var(--pearl-soft);
+  background: var(--dark-soft);
   transform: scale(1.2);
 }
 
@@ -690,7 +685,7 @@ margin:30px auto;
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--pearl-shimmer);
+  color: white;
   letter-spacing: 1.5px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
@@ -745,30 +740,30 @@ margin:30px auto;
   .buttonGlass {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.18) 50%, rgba(255, 255, 255, 0.12) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.18) 50%, rgba(0, 0, 0, 0.12) 100%);
     backdrop-filter: blur(22px) saturate(190%);
     -webkit-backdrop-filter: blur(22px) saturate(190%);
-    border: 1px solid rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(0, 0, 0, 0.45);
     box-shadow: 
       0 12px 35px rgba(0, 0, 0, 0.35),
-      0 5px 18px rgba(255, 255, 255, 0.15),
-      0 0 0 1px rgba(255, 255, 255, 0.25),
-      inset 0 2px 3px rgba(255, 255, 255, 0.35),
-      inset 0 -2px 2px rgba(0, 0, 0, 0.15);
+      0 5px 18px rgba(0, 0, 0, 0.15),
+      0 0 0 1px rgba(0, 0, 0, 0.25),
+      inset 0 2px 3px rgba(0, 0, 0, 0.35),
+      inset 0 -2px 2px rgba(255, 255, 255, 0.15);
   }
 
   .navButton:hover .buttonGlass {
     transform: scale(1.08);
     backdrop-filter: blur(26px) saturate(210%);
     -webkit-backdrop-filter: blur(26px) saturate(210%);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0.28) 50%, rgba(255, 255, 255, 0.2) 100%);
-    border-color: rgba(255, 255, 255, 0.55);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0.28) 50%, rgba(0, 0, 0, 0.2) 100%);
+    border-color: rgba(0, 0, 0, 0.55);
     box-shadow: 
       0 16px 45px rgba(0, 0, 0, 0.4),
-      0 7px 22px rgba(255, 255, 255, 0.2),
-      0 0 0 2px rgba(255, 255, 255, 0.35),
-      inset 0 3px 5px rgba(255, 255, 255, 0.45),
-      inset 0 -3px 3px rgba(0, 0, 0, 0.2);
+      0 7px 22px rgba(0, 0, 0, 0.2),
+      0 0 0 2px rgba(0, 0, 0, 0.35),
+      inset 0 3px 5px rgba(0, 0, 0, 0.45),
+      inset 0 -3px 3px rgba(255, 255, 255, 0.2);
   }
 
   .mainImageWrapper {
@@ -901,36 +896,36 @@ margin:30px auto;
   .buttonGlass {
     width: 44px;
     height: 44px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.16) 50%, rgba(255, 255, 255, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.1) 100%);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
     box-shadow: 
       0 8px 25px rgba(0, 0, 0, 0.32),
-      0 4px 15px rgba(255, 255, 255, 0.12),
-      0 0 0 1px rgba(255, 255, 255, 0.22),
-      inset 0 2px 3px rgba(255, 255, 255, 0.3),
-      inset 0 -2px 2px rgba(0, 0, 0, 0.12);
+      0 4px 15px rgba(0, 0, 0, 0.12),
+      0 0 0 1px rgba(0, 0, 0, 0.22),
+      inset 0 2px 3px rgba(0, 0, 0, 0.3),
+      inset 0 -2px 2px rgba(255, 255, 255, 0.12);
   }
 
   .navButton:hover .buttonGlass {
     transform: scale(1.06);
     backdrop-filter: blur(24px) saturate(200%);
     -webkit-backdrop-filter: blur(24px) saturate(200%);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.18) 100%);
-    border-color: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.18) 100%);
+    border-color: rgba(0, 0, 0, 0.5);
     box-shadow: 
       0 12px 35px rgba(0, 0, 0, 0.38),
-      0 6px 20px rgba(255, 255, 255, 0.18),
-      0 0 0 2px rgba(255, 255, 255, 0.32),
-      inset 0 3px 5px rgba(255, 255, 255, 0.4),
-      inset 0 -3px 3px rgba(0, 0, 0, 0.18);
+      0 6px 20px rgba(0, 0, 0, 0.18),
+      0 0 0 2px rgba(0, 0, 0, 0.32),
+      inset 0 3px 5px rgba(0, 0, 0, 0.4),
+      inset 0 -3px 3px rgba(255, 255, 255, 0.18);
   }
 
   .imageCounter {
     top: -12px;
     right: 15px;
-    padding: 0.5rem 0.2rem;
+    padding: 0.5rem 1.2rem;
     font-size: 0.9rem;
     letter-spacing: 1px;
     z-index: 25;
@@ -975,7 +970,7 @@ margin:30px auto;
 .thumbnail:focus,
 .progressDot:focus {
   outline: none;
-  box-shadow: 0 0 0 2px var(--pearl-soft);
+  box-shadow: 0 0 0 2px var(--dark-soft);
   border-radius: 50%;
 }
 
@@ -1046,7 +1041,7 @@ margin:30px auto;
   align-items: center;
   justify-content: center;
   min-height: 400px;
-  color: var(--primary-pearl);
+  color: var(--primary-dark);
   font-size: 1.2rem;
   opacity: 0.7;
 }

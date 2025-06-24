@@ -266,7 +266,8 @@ const Projects = () => {
 
   return <>
   <div className={styles.background}>
- <div className={styles.title} id="פרוייקטים" >פרוייקטים</div>
+ <div className={styles.title} id="פרוייקטים" >הפרוייקטים שלי</div>
+  <div className={styles.description} >במהלך השנים עבדתי על עשרות פרוייקטים, בעשרות סגנונות שונים - חשוב לי שתקבלו טעימה מכל סגנון  (תגללו ותהנו) </div>
       <div className={styles.projectsList}>
         {projectsData.map((project, index) => (
           <div key={project.id} className={styles.projectSection}>

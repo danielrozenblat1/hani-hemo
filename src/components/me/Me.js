@@ -5,6 +5,14 @@ import hani from "../../images/חני חמו תדמית ללא רקע.png"
 const AboutMe = () => {
   const containerRef = useRef(null);
   
+  const handleButtonClick = () => {
+    const phoneNumber = "+972525553141";
+    const message = "היי חני הגעתי מהדף שלך ,אני רוצה לשמוע ממך עוד על..";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+  
   // ScrollReveal configuration
   useEffect(() => {
     if (containerRef.current) {
@@ -52,7 +60,7 @@ const AboutMe = () => {
           
           <div className={styles.textBlock}>
             <p className={styles.paragraph}>
-              <strong>אחרי שנים של עבודה עם זוגות שרוצים בית שבאמת משקף אותם,</strong> אני יודעת בדיוק איך להפוך את החזון שלכם למציאות. כהנדסאית אדריכלות ועיצוב פנים מצטיינת, אני מתמחה בלקחת בתים שמרגישים "לא בדיוק נכון" ולהפוך אותם למקום שאתם אוהבים לחזור אליו כל יום.
+              <strong>אחרי שנים של עבודה עם זוגות,</strong> אני יודעת בדיוק איך להפוך את החזון שלכם למציאות. כהנדסאית אדריכלות ועיצוב פנים מצטיינת, אני מתמחה בלקחת בתים שמרגישים "לא בדיוק נכון" ולהפוך אותם למקום שאתם אוהבים לחזור אליו כל יום.
             </p>
             <div className={styles.divider}></div>
             
@@ -75,7 +83,7 @@ const AboutMe = () => {
             </p>
           </div>
           
-          <button className={styles.ctaButton}>
+          <button className={styles.ctaButton} onClick={handleButtonClick}>
             <span className={styles.buttonIcon}>🏠</span>
             בואו נעצב יחד את הבית של החלומות שלכם
           </button>

@@ -1,12 +1,12 @@
 .faqItem {
   margin-bottom: 1rem;
-  border: 1px solid #d2c0b2;
+  border: 1px solid #e8e0d6;
   border-radius: 8px;
   overflow: hidden;
   width: 500px;
   margin: 15px auto;
   direction: rtl;
-  box-shadow: 0 2px 4px rgba(210, 192, 178, 0.2);
+  box-shadow: 0 2px 4px rgba(232, 224, 214, 0.15);
   text-decoration: none;
 }
 
@@ -16,23 +16,23 @@
   align-items: center;
   width: 100%;
   padding: 1rem;
-  background-color: #f8f4f1;
+  background-color: #faf8f5;
   border: none;
   text-decoration: none;
-  color: #5a4a3f;
+  color: #6b5b50;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .questionButton:hover {
-  background-color: #f1e9e4;
+  background-color: #f5f1ed;
 }
 
 .questionText {
   font-family: 'AssistantR', sans-serif;
   font-size: 1.2rem;
   text-align: center;
-  color: #5a4a3f;
+  color: #6b5b50;
   direction: rtl;
   flex-grow: 1;
 }
@@ -40,7 +40,7 @@
 .iconWrapper {
   width: 24px;
   flex-shrink: 0;
-  color: #b3967f;
+  color: #c9b8a8;
   text-decoration: none;
 }
 
@@ -53,7 +53,7 @@
 .answerContainer {
   overflow: hidden;
   transition: height 0.3s ease;
-  background-color: #fdfbf9;
+  background-color: #fefcfa;
   margin: auto;
   direction: rtl;
 }
@@ -62,7 +62,7 @@
   font-family: 'AssistantR', sans-serif;
   font-size: 1.05rem;
   padding: 1rem;
-  color: #5a4a3f;
+  color: #6b5b50;
   justify-content: center;
   text-align: center;
   margin: auto;
@@ -70,7 +70,7 @@
 
 /* Accent for links or important text within answers */
 .answerText a, .answerText strong {
-  color: #b3967f;
+  color: #c9b8a8;
 }
 
 /* Responsive styles remain unchanged */

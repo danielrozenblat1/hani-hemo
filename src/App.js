@@ -7,6 +7,9 @@ import AboutMe from './components/me/Me';
 import InteriorDesign from './components/jobs/Jobs';
 import ProjectCarousel from './components/projects/Projects';
 import Projects from './screens/ProjectsScreen';
+import ForthScreen from './screens/ForthScreen';
+import ByMe from './components/ByMe/ByMe';
+import Recommendations from './components/recommends/Recommends';
 
 function App() {
   return <>
@@ -16,8 +19,10 @@ function App() {
   <SecondScreen/>
   <InteriorDesign/>
 <AboutMe/>
+<Recommendations/>
 <Projects/>
-    {/* <ScrollGallery/> */}
+<ForthScreen/>
+<ByMe/>
     </div>
   </>
 }

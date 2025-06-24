@@ -1,8 +1,8 @@
 .background {
-    background: #000;
+    background: #fffaf3;
     position: relative;
     overflow-x: hidden;
-    min-height: 100vh;
+
 }
 
 /* שכבת ערפל אפור עדין אבל מורגש */
@@ -17,3 +17,216 @@
     z-index: 1;
     filter: blur(60px);
 }
+
+.title {
+    font-family: 'Assistant', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    direction: rtl;
+    width: 80%;
+    margin: 2% auto;
+    flex-grow: 1;
+}
+
+.description {
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    direction: rtl;
+    width: 80%;
+    margin: 2% auto;
+    flex-grow: 1;
+}
+
+/* Responsive Media Queries */
+
+/* מתחת ל-350px */
+@media (max-width: 349px) {
+    .title {
+        font-size: 1.5rem;
+        width: 90%;
+        margin: 3% auto;
+    }
+    
+    .description {
+        font-size: 1rem;
+        width: 90%;
+        margin: 3% auto;
+    }
+    
+    .background::before {
+        filter: blur(30px);
+    }
+}
+
+/* 350-450px */
+@media (min-width: 350px) and (max-width: 450px) {
+    .title {
+        font-size: 1.9rem;
+        width: 85%;
+        margin: 2.5% auto;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+        width: 85%;
+        margin: 2.5% auto;
+    }
+    
+    .background::before {
+        filter: blur(40px);
+    }
+}
+
+/* 450-550px */
+@media (min-width: 450px) and (max-width: 550px) {
+    .title {
+        font-size: 1.9rem;
+        width: 82%;
+        margin: 2.5% auto;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+        width: 82%;
+        margin: 2.5% auto;
+    }
+    
+    .background::before {
+        filter: blur(45px);
+    }
+}
+
+/* 550-650px */
+@media (min-width: 550px) and (max-width: 650px) {
+    .title {
+        font-size: 2.1rem;
+        width: 82%;
+        margin: 2.2% auto;
+    }
+    
+    .description {
+        font-size: 1.2rem;
+        width: 82%;
+        margin: 2.2% auto;
+    }
+    
+    .background::before {
+        filter: blur(50px);
+    }
+}
+
+/* 650-750px */
+@media (min-width: 650px) and (max-width: 750px) {
+    .title {
+        font-size: 2.3rem;
+        width: 81%;
+        margin: 2.1% auto;
+    }
+    
+    .description {
+        font-size: 1.3rem;
+        width: 81%;
+        margin: 2.1% auto;
+    }
+    
+    .background::before {
+        filter: blur(55px);
+    }
+}
+
+/* 750-850px */
+@media (min-width: 750px) and (max-width: 850px) {
+    .title {
+        font-size: 2.4rem;
+        width: 80%;
+        margin: 2% auto;
+    }
+    
+    .description {
+        font-size: 1.35rem;
+        width: 80%;
+        margin: 2% auto;
+    }
+    
+    .background::before {
+        filter: blur(58px);
+    }
+}
+
+/* 850-950px */
+@media (min-width: 850px) and (max-width: 950px) {
+    .title {
+        font-size: 2.5rem;
+        width: 80%;
+        margin: 2% auto;
+    }
+    
+    .description {
+        font-size: 1.4rem;
+        width: 80%;
+        margin: 2% auto;
+    }
+    
+    .background::before {
+        filter: blur(60px);
+    }
+}
+
+/* 950-1050px */
+@media (min-width: 950px) and (max-width: 1050px) {
+    .title {
+        font-size: 2.6rem;
+        width: 78%;
+        margin: 2% auto;
+    }
+    
+    .description {
+        font-size: 1.45rem;
+        width: 78%;
+        margin: 2% auto;
+    }
+    
+    .background::before {
+        filter: blur(62px);
+    }
+}
+
+/* 1050-1150px */
+@media (min-width: 1050px) and (max-width: 1150px) {
+    .title {
+        font-size: 2.7rem;
+        width: 76%;
+        margin: 2% auto;
+    }
+    
+    .description {
+        font-size: 1.5rem;
+        width: 76%;
+        margin: 2% auto;
+    }
+    
+    .background::before {
+        filter: blur(65px);
+    }
+}
+
+/* 1150-1250px */
+@media (min-width: 1150px) and (max-width: 1250px) {
+    .title {
+        font-size: 2.8rem;
+        width: 74%;
+        margin: 2% auto;
+    }
+    
+    .description {
+        font-size: 1.55rem;
+        width: 74%;
+        margin: 2% auto;
+    }
+    
+    .background::before {
+        filter: blur(68px);
+    }
+}
+

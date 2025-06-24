@@ -5,7 +5,7 @@ import shiputz2 from "../../images/חני חמו שיפוץ 2.png"
 import homestyleing from "../../images/חני חמו עיצוב 1.png"
 import homestyleing2 from "../../images/חני חמו עיצוב 2.png"
 import consult from "../../images/חני חמו ייעוץ 2.png"
-import consult2 from "../../images/חני חמו ייעוץ 1.png"
+import consult2 from "../../images/מזוודה 1.png"
 
 const InteriorDesign = () => {
   const [visibleItems, setVisibleItems] = useState([]);
