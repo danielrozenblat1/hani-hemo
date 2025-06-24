@@ -169,8 +169,9 @@ const ThirdScreen = () => {
             </div>
           </div>
         </div>
-        <Button text="חני, בואי נתאם שיחה"/>
+    
       </div>
+          <Button text="חני, בואי נתאם שיחה"/>
     </>
   );
 };

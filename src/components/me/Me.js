@@ -60,32 +60,29 @@ const AboutMe = () => {
           
           <div className={styles.textBlock}>
             <p className={styles.paragraph}>
-              <strong>אחרי שנים של עבודה עם זוגות,</strong> אני יודעת בדיוק איך להפוך את החזון שלכם למציאות. כהנדסאית אדריכלות ועיצוב פנים מצטיינת, אני מתמחה בלקחת בתים שמרגישים "לא בדיוק נכון" ולהפוך אותם למקום שאתם אוהבים לחזור אליו כל יום.
+              <strong>עוד כילדה, כל יומיים עיצבתי מחדש את החדר שלי.</strong> אמא שלי אמרה שאני לא יכולה לשבת במקום - תמיד הזזתי ריהוט, החלפתי וילונות, וחיפשתי דרכים לשפר את הנראות. היום אני מבינה שזה לא היה עניין של חוסר מנוחה - זו תמיד הייתה השליחות שלי.
             </p>
             <div className={styles.divider}></div>
             
             <p className={styles.paragraph}>
-              מה שמייחד אותי? אני לא רק מעצבת - אני השותפה שלכם לתהליך. בעוד שאחרים נותנים לכם רעיונות ומשאירים אתכם לבד, אני כאן לכל התהליך: מהרגע שאנחנו מתכננים ועד הרגע שאתם מקבלים את המפתח לבית המושלם שלכם.
+              כשקניתי את הבית הראשון שלי, התהליך פתח לי את העיניים. <strong>ראיתי איך זוגות מתחילים במחשבה שהם יודעים מה הם רוצים,</strong> ואז נתקעים באמצע. הם מגלים שיש הבדל עצום בין הרעיון שבראש לבין הביצוע במציאות. בדיוק שם הבנתי מה הייעוד שלי.
             </p>
             <div className={styles.divider}></div>
             
             <p className={styles.paragraph}>
-              <strong>למה זוגות בוחרים בי?</strong> כי אני מבינה שזה לא רק עיצוב - זה הבית שלכם, המקום שבו תבנו את החיים שלכם. אני מקשיבה לחלומות שלכם, מבינה את האתגרים שלכם, ומוודאת שכל פרט יעבוד בשבילכם בעוד שנים.
+              <strong>אני מאמינה שכל זוג מגיע אליי עם חלום.</strong> הבעיה היא שלעיתים קרובות הם מפחדים שזה יצא יקר מדי, יימשך יותר מדי, או שבסוף זה לא יעבוד. אני כאן כדי לוודא שהחלום הזה יתממש - בלי לפוצץ תקציב, בלי לאבד חודשים יקרים, ובטח בלי להתפשר על מה שחשוב לכם באמת.
             </p>
             <div className={styles.divider}></div>
-            
-            <p className={styles.paragraph}>
-              <strong>התוצאות מדברות בעצמן:</strong> הופעתי במגזיני עיצוב מובילים, הפכתי לעוסק מורשה תוך חצי שנה, ורוב הלקוחות שלי מגיעים בהמלצות. הוזמנתי למפעלים בחו"ל ולתערוכות מקצועיות - אבל הכי חשוב לי זה לראות את הפנים שלכם כשאתם נכנסים לבית החדש.
-            </p>
+         
             
             <p className={styles.finalText}>
-              מוכנים להפוך את הבית שלכם למקום שתמיד חלמתם עליו?
+              אני כאן כדי  לגגרום לכם להתאהב מחדש בלחזור הביתה
             </p>
           </div>
           
           <button className={styles.ctaButton} onClick={handleButtonClick}>
-            <span className={styles.buttonIcon}>🏠</span>
-            בואו נעצב יחד את הבית של החלומות שלכם
+            <span className={styles.buttonIcon}>💫</span>
+            בואו נדבר על בית החלומות שלכם
           </button>
         </div>
       </div>
