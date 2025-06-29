@@ -13,11 +13,8 @@ const AboutMe = () => {
     window.open(whatsappURL, "_blank");
   };
   
-  // ScrollReveal configuration
   useEffect(() => {
     if (containerRef.current) {
-      // Since ScrollReveal is not available in this environment, 
-      // we'll use a simple intersection observer for the reveal effect
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -50,39 +47,37 @@ const AboutMe = () => {
         </div>
         
         <div className={`${styles.content} ${styles.revealItem}`}>
-          <h2 className={styles.mainTitle}>נעים להכיר, חני חמו</h2>
-          
-          <div className={styles.quoteContainer}>
-            <p className={styles.quote}>
-              "כל פרויקט הוא כמו חליפה שתפורה במיוחד עבורכם"
-            </p>
-          </div>
-          
+          <h2 className={styles.mainTitle}>נעים מאוד, חני חמו</h2>
+        
           <div className={styles.textBlock}>
             <p className={styles.paragraph}>
-              <strong>עוד כילדה, כל יומיים עיצבתי מחדש את החדר שלי.</strong> אמא שלי אמרה שאני לא יכולה לשבת במקום - תמיד הזזתי ריהוט, החלפתי וילונות, וחיפשתי דרכים לשפר את הנראות. היום אני מבינה שזה לא היה עניין של חוסר מנוחה - זו תמיד הייתה השליחות שלי.
+              עוד לפני שהבנתי מה זה אומר "עיצוב פנים", הבנתי דבר אחד - אין כמו התחושה של בית שהוא באמת שלך. לא רק קירות, אלא מקום מדויק לצרכים שלך, לחלומות שלך, לאורח החיים שלך.
             </p>
             <div className={styles.divider}></div>
             
             <p className={styles.paragraph}>
-              כשקניתי את הבית הראשון שלי, התהליך פתח לי את העיניים. <strong>ראיתי איך זוגות מתחילים במחשבה שהם יודעים מה הם רוצים,</strong> ואז נתקעים באמצע. הם מגלים שיש הבדל עצום בין הרעיון שבראש לבין הביצוע במציאות. בדיוק שם הבנתי מה הייעוד שלי.
+              כנראה שזה לא מפתיע שמגיל צעיר מצאתי את עצמי מזיזה רהיטים, משנה וילונות ומדמיינת איך אפשר לשדרג כל חלל. בהמשך, זה הפך למקצוע. סיימתי את לימודיי כהנדסאית אדריכלות ועיצוב פנים בהצטיינות, ועברתי לעבוד במשרדי אדריכלות מובילים.
             </p>
             <div className={styles.divider}></div>
             
             <p className={styles.paragraph}>
-              <strong>אני מאמינה שכל זוג מגיע אליי עם חלום.</strong> הבעיה היא שלעיתים קרובות הם מפחדים שזה יצא יקר מדי, יימשך יותר מדי, או שבסוף זה לא יעבוד. אני כאן כדי לוודא שהחלום הזה יתממש - בלי לפוצץ תקציב, בלי לאבד חודשים יקרים, ובטח בלי להתפשר על מה שחשוב לכם באמת.
+              אחרי שצברתי ניסיון, הבנתי שליווי אישי וצמוד זה לא מותרות – זו הדרך היחידה להפוך את התהליך למהנה, מדויק ובעיקר - כזה שמונע טעויות יקרות. כך נולד <strong>סטודיו חני חמו לעיצוב פנים</strong>. מאז, עשרות בתים עברו תחת הידיים שלי - מדירות קבלן, דרך בתים פרטיים ועד משרדים.
+            </p>
+            <div className={styles.divider}></div>
+            
+            <p className={styles.paragraph}>
+              היום, מעבר לתכנון ועיצוב פנים, אני מתמחה במציאת פתרונות יצירתיים לתקלות תכנוניות, ליווי מקיף של שיפוצים, הום סטיילינג, והגשת תוכניות לשינויי דיירים בדירות קבלן. כל פרויקט מתחיל מהבנה עמוקה של האנשים שמאחורי הבית – אין נוסחאות קבועות, אין עיצובים גנריים – הכל מותאם אישית, כמו חליפה שתפורה בדיוק עבורכם.
             </p>
             <div className={styles.divider}></div>
          
-            
             <p className={styles.finalText}>
-              אני כאן כדי  לגגרום לכם להתאהב מחדש בלחזור הביתה
+              המטרה שלי פשוטה: שתכנסו הביתה בכל פעם מחדש ותרגישו – זה שלי.
             </p>
           </div>
           
           <button className={styles.ctaButton} onClick={handleButtonClick}>
             <span className={styles.buttonIcon}>💫</span>
-            בואו נדבר על בית החלומות שלכם
+            בואו נדבר על הבית שלכם
           </button>
         </div>
       </div>

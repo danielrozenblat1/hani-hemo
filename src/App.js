@@ -10,8 +10,12 @@ import Projects from './screens/ProjectsScreen';
 import ForthScreen from './screens/ForthScreen';
 import ByMe from './components/ByMe/ByMe';
 import Recommendations from './components/recommends/Recommends';
+import Testimonials from './components/newRecommends/NewRecommends';
+import FifthScreen from './screens/FifthScreen';
 
 function App() {
+
+
   return <>
   <div style={{overflowX:"hidden"}}>
   <FirstScreen/>
@@ -20,6 +24,7 @@ function App() {
   <InteriorDesign/>
 <AboutMe/>
 <Recommendations/>
+
 <Projects/>
 <ForthScreen/>
 <ByMe/>

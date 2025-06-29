@@ -10,8 +10,8 @@ import LoadingEffect from '../components/loader/Loader';
 import logo from "../images/חני חמו לוגו.png"
 
 // תמונות עבור הצדדים - תוכל להחליף אותן לתמונות שלך
-import sideImageLeft from "../images/חני חמו תמונה ימנית.png" // החלף לתמונה שלך
-import sideImageRight from "../images/חני חמו תמונה שמאלית.png"// החלף לתמונה שלך
+import sideImageLeft from "../images/חני חמו תמונה שמאלית.png" // החלף לתמונה שלך
+import sideImageRight from "../images/חני חמו תמונה ימנית.png"// החלף לתמונה שלך
 
 const FirstScreen = (props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -107,7 +107,7 @@ const FirstScreen = (props) => {
               <div className={`${styles.textContainer} ${textAnimationComplete ? styles.initialLoad : ''}`}>
                 <div className={styles.brandInfo}>
                   <h1 className={styles.brandTitle}>HANI HEMO</h1>
-                  <p className={styles.brandDescription}>כאן כדי להפוך כל חלום שלך לבית מעוצב שתפור בול למידותיך</p>
+                  <p className={styles.brandDescription}>הבית שתמיד רציתם. בלי פשרות, בלי תקלות ובלי הפתעות</p>
                 </div>
                 
                 {/* Scroll Down Indicator */}

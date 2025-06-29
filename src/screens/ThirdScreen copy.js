@@ -1,22 +1,16 @@
 import styles from "./ThirdScreen.module.css";
 
-import { useEffect, useRef } from "react";
-import { Player } from "@lordicon/react";
+import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
-import withyou from "../icons/wired-outline-645-people-handshake-transaction-hover-pinch (1).json";
-import searches from "../icons/wired-outline-19-magnifier-zoom-search-morph-cross.json";
-import wrong from "../icons/wired-outline-731-real-estate-building-project-hover-pinch.json";
-import moneyy from "../icons/wired-outline-298-coins-hover-spending (1).json";
-import foryou from "../icons/wired-outline-781-rulers-hover-pinch.json";
+// Import your SVG components here
+import WithyouIcon from "../svg/undraw_interior-design_j887.svg";
+import SearchesIcon from "../svg/undraw_time-management_fedt.svg"
+import WrongIcon from "../svg/undraw_warning_tl76.svg";
+import MoneyyIcon from "../svg/undraw_credit-card-payments_y0vn.svg";
+import ForyouIcon from "../svg/undraw_work-in-progress_m95a.svg";
 import Button from "../components/button/Button";
 
 const ThirdScreen = () => {
-  const playerRef1 = useRef();
-  const playerRef2 = useRef();
-  const playerRef3 = useRef();
-  const playerRef4 = useRef();
-  const playerRef5 = useRef();
-
   useEffect(() => {
     ScrollReveal().reveal(`.${styles.title}`, {
       duration: 1000,
@@ -62,118 +56,86 @@ const ThirdScreen = () => {
       delay: 200,
       scale: 1,
     });
-
-    playerRef1.current?.playFromBeginning();
-    playerRef2.current?.playFromBeginning();
-    playerRef3.current?.playFromBeginning();
-    playerRef4.current?.playFromBeginning();
-    playerRef5.current?.playFromBeginning();
   }, []);
 
   return (
     <>
       <div className={styles.bigWrapper}>
-        <div className={styles.step} itemscope itemtype="https://schema.org/Organization">
+        <div className={styles.step} itemScope itemType="https://schema.org/Organization">
           <div className={styles.icons}>
-            <Player
-              ref={playerRef1}
-              size="100%"
-              onComplete={() => setTimeout(() => playerRef1.current?.playFromBeginning(), 2500)}
-              icon={wrong}
-            />
+            <img src={WrongIcon} alt="מניעת טעויות" className={styles.iconImage} />
           </div>
           <div className={styles.text}>
-            <div className={styles.stepHeader} itemprop="name">
+            <div className={styles.stepHeader} itemProp="name">
               מניעת טעויות קריטיות
             </div>
-            <div className={styles.section} itemprop="description">
+            <div className={styles.section} itemProp="description">
               בלי תכנון מקצועי, אתם עלולים להזמין רהיטים לא מתאימים שיעלו לכם אלפי שקלים להחליף. כמעצבת בעלת ניסיון והכשרה הנדסית, אני מזהה מראש בעיות במידות, פרופורציות ומיקומים — וחוסכת לכם כאב ראש ועלויות מיותרות.
             </div>
           </div>
         </div>
 
-        <div className={styles.step} itemscope itemtype="https://schema.org/Product">
+        <div className={styles.step} itemScope itemType="https://schema.org/Product">
           <div className={styles.text}>
-            <div className={styles.stepHeader} itemprop="name">
+            <div className={styles.stepHeader} itemProp="name">
               חיסכון בזמן והתעסקות
             </div>
-            <div className={styles.section} itemprop="description">
+            <div className={styles.section} itemProp="description">
               במקום שתבזבזו חודשים על השוואות, ספקים ואנשי מקצוע לא אמינים — אני נותנת לכם גישה ישירה לרשת מוכחת של בעלי מקצוע איכותיים שעבדתי איתם במשך שנים, במחירים הוגנים ובשקט נפשי מלא.
             </div>
           </div>
           <div className={styles.icons}>
-            <Player
-              ref={playerRef2}
-              delay={500}
-              size="100%"
-              onComplete={() => setTimeout(() => playerRef2.current?.playFromBeginning(), 2500)}
-              icon={searches}
-            />
+            <img src={SearchesIcon} alt="חיסכון בזמן" className={styles.iconImage} />
           </div>
         </div>
 
-        <div className={styles.step} itemscope itemtype="https://schema.org/Organization">
+        <div className={styles.step} itemScope itemType="https://schema.org/Organization">
           <div className={styles.icons}>
-            <Player
-              ref={playerRef3}
-              size="100%"
-              onComplete={() => setTimeout(() => playerRef3.current?.playFromBeginning(), 2500)}
-              icon={foryou}
-            />
+            <img src={ForyouIcon} alt="התאמה אישית" className={styles.iconImage} />
           </div>
           <div className={styles.text}>
-            <div className={styles.stepHeader} itemprop="name">
+            <div className={styles.stepHeader} itemProp="name">
               התאמה מושלמת לצרכים שלכם
             </div>
-            <div className={styles.section} itemprop="description">
+            <div className={styles.section} itemProp="description">
               עיצוב מהפינטרסט או מאפליקציות AI נשמע טוב בתיאוריה, אבל במציאות זה לא תמיד עובד. אני בונה עבורכם תכנון מדויק שמבוסס על המידות, הפרופורציות והצרכים האמיתיים שלכם — כמו חליפה שמותאמת במיוחד עבורכם.
             </div>
           </div>
         </div>
 
-        <div className={styles.step} itemscope itemtype="https://schema.org/Organization">
+        <div className={styles.step} itemScope itemType="https://schema.org/Organization">
           <div className={styles.text}>
-            <div className={styles.stepHeader} itemprop="name">
+            <div className={styles.stepHeader} itemProp="name">
               שליטה בתקציב ומניעת הפתעות
             </div>
-            <div className={styles.section} itemprop="description">
+            <div className={styles.section} itemProp="description">
               אחד הגורמים המרכזיים לחריגות בתקציב הוא חוסר בתכנון כלכלי מדויק. אני דואגת להכין עבורכם כתב כמויות ותכנון מסודר שמונעים מכם הפתעות יקרות ומבטיחים שליטה מלאה בתקציב.
             </div>
           </div>
           <div className={styles.icons}>
-            <Player
-              ref={playerRef4}
-              delay={500}
-              size="100%"
-              onComplete={() => setTimeout(() => playerRef4.current?.playFromBeginning(), 2500)}
-              icon={moneyy}
-            />
+            <img src={MoneyyIcon} alt="שליטה בתקציב" className={styles.iconImage} />
           </div>
         </div>
 
-        <div className={styles.step} itemscope itemtype="https://schema.org/Course">
+        <div className={styles.step} itemScope itemType="https://schema.org/Course">
           <div className={styles.icons}>
-            <Player
-              ref={playerRef5}
-              size="100%"
-              onComplete={() => setTimeout(() => playerRef5.current?.playFromBeginning(), 2500)}
-              icon={withyou}
-            />
+            <img src={WithyouIcon} alt="ליווי אישי" className={styles.iconImage} />
           </div>
           <div className={styles.text}>
-            <div className={styles.stepHeader} itemprop="name">
+            <div className={styles.stepHeader} itemProp="name">
               ליווי אישי שמונע עומס ולחץ
             </div>
-            <div className={styles.section} itemprop="description">
+            <div className={styles.section} itemProp="description">
               אין שום סיבה שתנהלו את כל הבירוקרטיה והפרטים הקטנים לבד. אני מלווה אתכם באופן אישי כדי שתוכלו ליהנות מהדרך, במקום להילחץ ממנה.
             </div>
           </div>
         </div>
     
       </div>
-    <div className={styles.description}>
-אני כאן כדי לתכנן ביחד אתכם בית שירגיש נכון. מהתכנון ועד הפרטים הכי קטנים. ולתרגם את החלום שלכם למרחב שנעים לחיות בו, כל יום מחדש.</div>
-          <Button text="חני, בואי נתאם שיחה"/>
+      <div className={styles.description}>
+        אני כאן כדי לתכנן ביחד אתכם בית שירגיש נכון. מהתכנון ועד הפרטים הכי קטנים. ולתרגם את החלום שלכם למרחב שנעים לחיות בו, כל יום מחדש.
+      </div>
+      <Button text="חני, בואי נתאם שיחה"/>
     </>
   );
 };

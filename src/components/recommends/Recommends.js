@@ -13,6 +13,7 @@ import result4 from "../../images/חני חמו המלצות 4.png";
 import result5 from "../../images/חני חמו המלצות 5.png";
 import result6 from "../../images/חני חמו המלצות 6.png";
 import result7 from "../../images/חני חמו המלצות 7.png";
+import FifthScreen from '../../screens/FifthScreen';
 const Recommendations = () => {
   const images = [
     result1, result2, result3 ,   result4, result5, result6,result7
@@ -58,6 +59,7 @@ const Recommendations = () => {
           ))}
         </Slider>
       </div>
+      <FifthScreen/>
       <Button text="חני, בואי נדבר!" />
     </>
   );

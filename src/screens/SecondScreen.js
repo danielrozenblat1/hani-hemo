@@ -3,7 +3,7 @@ import ScrollReveal from 'scrollreveal';
 import { Player } from '@lordicon/react';
 
 import styles from "./SecondScreen.module.css";
-import ThirdScreen from './ThirdScreen';
+import ThirdScreen from './ThirdScreen copy';
 
 // קומפוננטת טקסט מתחלף
 const CustomTextTransition = ({ texts, interval = 3000, className = "" }) => {
@@ -154,10 +154,12 @@ const SecondScreen = () => {
                         />
                     </div>
                 </div>
-                <div className={styles.description}>שינויים בבית זה תמיד מרגש... אבל חשוב שתדעו -  <strong>שינוי אמיתי מתחיל בתכנון נכון.</strong>
-עיצוב לא מתחיל רק בבחירת צבעים או ספה יפה. זה מתחיל בהבנה עמוקה של החלל, של הצרכים שלכם, ושל הדרך הכי חכמה להפוך את הבית שלכם למקום שנעים לחיות בו — היום ובעתיד.</div>
+                <div className={styles.description}>שינויים בבית זה תמיד מרגש... אבל חשוב שתדעו -  <strong> שינוי אמיתי מתחיל בתכנון נכון. </strong>
+שינוי בבית לא מתחיל בצבע לקיר או בכריות לספה. הוא מתחיל בכם. בצרכים שלכם, בטעמים, באורח החיים, ובמה שחשוב באמת.</div>
  <div className={styles.title}>אז למה בעצם חשוב להעזר במעצבת פנים?</div>
                 <ThirdScreen/>
+
+
             </div>
         </>
     );
