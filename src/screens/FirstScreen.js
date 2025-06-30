@@ -174,7 +174,7 @@ const FirstScreen = (props) => {
               <div className={`${styles.textContainer} ${textAnimationComplete ? styles.initialLoad : ''}`}>
                 <div className={styles.brandInfo}>
                   <h1 className={styles.brandTitle}>HANI HEMO</h1>
-                  <p className={styles.brandDescription}>כאן כדי להפוך כל חלום שלך לבית מעוצב שתפור בול למידותיך</p>
+                    <p className={styles.brandDescription}>הבית שתמיד רציתם. בלי פשרות, בלי תקלות ובלי הפתעות</p>
                 </div>
                 
                 {/* Scroll Down Indicator */}
