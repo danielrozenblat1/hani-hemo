@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './Jobs.module.css';
 import { FaClipboardList, FaHammer, FaBuilding, FaHome, FaLightbulb, FaGem, FaHandsHelping, FaPalette, FaClock, FaListUl, FaShoppingBag, FaBullseye, FaWalking, FaBrain, FaBook, FaTools, FaEye } from 'react-icons/fa';
-import shiputz from "../../images/חני חמו שיפוץ.png"
+import shiputz from "../../images/תכנון פנים.png"
 import shiputz2 from "../../images/חני חמו שיפוץ 2.png"
-import homestyleing from "../../images/חני חמו עיצוב 1.png"
+import homestyleing from "../../images/הום סטיילינג.png"
 import homestyleing2 from "../../images/חני חמו עיצוב 2.png"
-import consult from "../../images/חני חמו ייעוץ 2.png"
+import consult from "../../images/פגישה אישית.png"
 import consult2 from "../../images/חני מזוודה.jpeg"
-
+import livui from "../../images/ליווי ליום רכישות.png"
 const InteriorDesign = () => {
   const [visibleItems, setVisibleItems] = useState([]);
   const [expandedItems, setExpandedItems] = useState([]);
@@ -43,7 +43,7 @@ const InteriorDesign = () => {
         { text: 'הבטחת התאמה והרמוניה בין כל הפריטים', icon: FaGem },
         { text: 'ייעוץ פונקציונלי לבחירות נכונות', icon: FaHandsHelping }
       ],
-      defaultImage: homestyleing,
+      defaultImage: livui,
       hoverImage: homestyleing2
     },
     {
