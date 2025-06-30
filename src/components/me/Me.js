@@ -71,7 +71,7 @@ const AboutMe = () => {
             <div className={styles.divider}></div>
          
             <p className={styles.finalText}>
-              המטרה שלי פשוטה: שתכנסו הביתה בכל פעם מחדש ותרגישו – זה שלי.
+              המטרה שלי פשוטה: שתכנסו לבית בכל פעם מחדש ותרגישו – זה שלי.
             </p>
           </div>
           

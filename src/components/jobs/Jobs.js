@@ -23,7 +23,7 @@ const InteriorDesign = () => {
         { text: 'ליווי מקצועי בבחירת חומרי גמר וריהוט', icon: FaEye },
         { text: 'התאמה אישית לצרכים - שיפוץ חלקי, מלא או בניה חדשה', icon: FaBuilding },
         { text: 'הבנת הצרכים ויצירת קונספט עיצובי מותאם', icon: FaLightbulb },
-        { text: 'שאלון מפורט לקבלנים ובעלי מקצוע', icon: FaBook },
+  
         { text: 'אפשרות ליווי לרכישות והשלמת תהליך הגמר', icon: FaShoppingBag },
         { text: 'ייעוץ בארגון וסידור פונקציונלי של הבית', icon: FaHandsHelping }
       ],

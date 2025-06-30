@@ -105,13 +105,63 @@ import kfarsaba12 from "../images/חני חמו שיפוץ דירה בכפר ס�
 import kfarsaba13 from "../images/חני חמו שיפוץ דירה בכפר סבא 13.png";
 import kfarsaba14 from "../images/חני חמו שיפוץ דירה בכפר סבא 14.png";
 
-// אימפורטים לתמונות השרון (6 תמונות)
+// אימפורטים לתמונות השרון (56 תמונות)
 import sharon1 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 1.png";
 import sharon2 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 2.png";
 import sharon3 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 3.png";
 import sharon4 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 4.png";
 import sharon5 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 5.png";
 import sharon6 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 6.png";
+import sharon7 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 7.png";
+import sharon8 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 8.png";
+import sharon9 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 9.png";
+import sharon10 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 10.png";
+import sharon11 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 11.png";
+import sharon12 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 12.png";
+import sharon13 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 13.png";
+import sharon14 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 14.png";
+import sharon15 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 15.png";
+import sharon16 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 16.png";
+import sharon17 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 17.png";
+import sharon18 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 18.png";
+import sharon19 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 19.png";
+import sharon20 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 20.png";
+import sharon21 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 21.png";
+import sharon22 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 22.png";
+import sharon23 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 23.png";
+import sharon24 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 24.png";
+import sharon25 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 25.png";
+import sharon26 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 26.png";
+import sharon27 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 27.png";
+import sharon28 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 28.png";
+import sharon29 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 29.png";
+import sharon30 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 30.png";
+import sharon31 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 31.png";
+import sharon32 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 32.png";
+import sharon33 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 33.png";
+import sharon34 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 34.png";
+import sharon35 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 35.png";
+import sharon36 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 36.png";
+import sharon37 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 37.png";
+import sharon38 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 38.png";
+import sharon39 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 39.png";
+import sharon40 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 40.png";
+import sharon41 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 41.png";
+import sharon42 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 42.png";
+import sharon43 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 43.png";
+import sharon44 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 44.png";
+import sharon45 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 45.png";
+import sharon46 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 46.png";
+import sharon47 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 47.png";
+import sharon48 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 48.png";
+import sharon49 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 49.png";
+import sharon50 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 50.png";
+import sharon51 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 51.png";
+import sharon52 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 52.png";
+import sharon53 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 53.png";
+import sharon54 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 54.png";
+import sharon55 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 55.png";
+import sharon56 from "../images/חני חמו שיפוץ מקיף לבית פרטי באזור השרון 56.png";
 
 const Projects = () => {
   // יצירת מערכי התמונות
@@ -228,7 +278,56 @@ const Projects = () => {
     { src: sharon3, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 3" },
     { src: sharon4, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 4" },
     { src: sharon5, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 5" },
-    { src: sharon6, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 6" }
+    { src: sharon6, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 6" },
+    { src: sharon7, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 7" },
+    { src: sharon8, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 8" },
+    { src: sharon9, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 9" },
+    { src: sharon10, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 10" },
+    { src: sharon11, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 11" },
+    { src: sharon12, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 12" },
+    { src: sharon13, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 13" },
+    { src: sharon14, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 14" },
+    { src: sharon15, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 15" },
+
+    { src: sharon18, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 18" },
+    { src: sharon19, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 19" },
+    { src: sharon20, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 20" },
+    { src: sharon21, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 21" },
+    { src: sharon22, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 22" },
+    { src: sharon23, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 23" },
+    { src: sharon24, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 24" },
+    { src: sharon25, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 25" },
+    { src: sharon26, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 26" },
+    { src: sharon27, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 27" },
+    { src: sharon28, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 28" },
+    { src: sharon29, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 29" },
+    { src: sharon30, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 30" },
+    { src: sharon31, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 31" },
+    { src: sharon32, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 32" },
+    { src: sharon33, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 33" },
+    { src: sharon34, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 34" },
+    { src: sharon35, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 35" },
+    { src: sharon36, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 36" },
+    { src: sharon37, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 37" },
+    { src: sharon38, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 38" },
+    { src: sharon39, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 39" },
+    { src: sharon40, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 40" },
+    { src: sharon41, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 41" },
+    { src: sharon42, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 42" },
+    { src: sharon43, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 43" },
+    { src: sharon44, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 44" },
+    { src: sharon45, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 45" },
+    { src: sharon46, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 46" },
+    { src: sharon47, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 47" },
+    { src: sharon48, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 48" },
+    { src: sharon49, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 49" },
+    { src: sharon50, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 50" },
+    { src: sharon51, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 51" },
+    { src: sharon52, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 52" },
+    { src: sharon53, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 53" },
+    { src: sharon54, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 54" },
+    { src: sharon55, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 55" },
+    { src: sharon56, alt: "שיפוץ מקיף לבית באזור השרון - תמונה 56" }
   ];
 
   const projectsData = [
