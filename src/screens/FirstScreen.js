@@ -78,7 +78,7 @@ const FirstScreen = (props) => {
   };
 
   const handlePhoneCall = () => {
-    window.location.href = 'tel:+972-50-123-4567'; // החלף למספר הטלפון הנכון
+    window.location.href = 'tel:+972525553141'; // החלף למספר הטלפון הנכון
   };
 
   const scrollToProjects = () => {
