@@ -12,6 +12,7 @@ import ByMe from './components/ByMe/ByMe';
 import Recommendations from './components/recommends/Recommends';
 import Testimonials from './components/newRecommends/NewRecommends';
 import FifthScreen from './screens/FifthScreen';
+import Place from './components/place/Place';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
 
 <Projects/>
 <ForthScreen/>
+<Place/>
 <ByMe/>
     </div>
   </>
