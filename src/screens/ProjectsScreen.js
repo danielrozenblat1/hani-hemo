@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCarousel from '../components/projects/Projects';
 import styles from './ProjectsScreen.module.css';
-
+import Button from "../components/button/Button"
 // אימפורטים לתמונות תל אביב (18 תמונות)
 import telaviv1 from "../images/חני חמו דירה בתל אביב 1.png";
 import telaviv2 from "../images/חני חמו דירה בתל אביב 2.png";
@@ -380,7 +380,9 @@ const Projects = () => {
                 description={project.description}
               />
             </div>
+             <Button text="ליצירת קשר לחצו כאן" message="היי חני הגעתי מהדף, ראיתי פרוייקטים שלך ואשמח לשמוע עוד על.."/>
           </div>
+         
         ))}
       </div>
  </div>

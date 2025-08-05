@@ -8,6 +8,7 @@ import homestyleing2 from "../../images/חני חמו עיצוב 2.png"
 import consult from "../../images/פגישה אישית.png"
 import consult2 from "../../images/חני מזוודה.jpeg"
 import livui from "../../images/ליווי ליום רכישות.png"
+import Button from '../button/Button';
 const InteriorDesign = () => {
   const [visibleItems, setVisibleItems] = useState([]);
   const [expandedItems, setExpandedItems] = useState([]);
@@ -185,6 +186,7 @@ const InteriorDesign = () => {
           </div>
         </div>
       ))}
+      <Button text="לעוד פרטים לחצו כאן" message="היי חני הגעתי מהדף, ראיתי את השירותים שאת נותנת ואשמח לשמוע עוד על.."/>
     </div>
   );
 };
