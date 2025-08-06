@@ -13,6 +13,8 @@ import Recommendations from './components/recommends/Recommends';
 import Testimonials from './components/newRecommends/NewRecommends';
 import FifthScreen from './screens/FifthScreen';
 import Place from './components/place/Place';
+import FloatingWhatsAppButton from './components/FloatingButton/FloatingButton';
+import Popped from './components/poppedUpWindow/Popped';
 
 function App() {
 
@@ -29,6 +31,8 @@ function App() {
 <Projects/>
 <ForthScreen/>
 <Place/>
+<FloatingWhatsAppButton/>
+<Popped/>
 <ByMe/>
     </div>
   </>

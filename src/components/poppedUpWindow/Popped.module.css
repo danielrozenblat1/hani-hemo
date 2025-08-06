@@ -1,0 +1,491 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50, 0.75);
+  z-index: 999;
+}
+
+.popped {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  max-width: 480px;
+  position: relative;
+  z-index: 1000;
+  animation: formAppear 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  direction: rtl;
+  font-family: "Assistant", sans-serif;
+}
+
+/* Form container styling with cream and gray theme */
+.formContainer {
+  width: 100%;
+  max-width: 480px;
+  padding: 2.5rem 3rem 2.5rem 2.5rem;
+  position: relative;
+  background: linear-gradient(135deg, 
+    #fdfcfb 0%, 
+    #f8f6f0 20%, 
+    #f5f2ea 40%, 
+    #f2ede3 60%, 
+    #efe8dc 80%, 
+    #ede4d5 100%);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 
+      0 15px 35px rgba(120, 120, 120, 0.15),
+      0 5px 15px rgba(100, 100, 100, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      inset 0 0 25px rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(180, 170, 150, 0.2);
+  box-sizing: border-box;
+}
+
+/* Close button (X) styling */
+.x {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #8a8580;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.x:hover {
+  background-color: rgba(138, 133, 128, 0.15);
+  color: #6d6960;
+  transform: rotate(90deg);
+}
+
+/* Decorative elements with cream and subtle gray tones */
+.formDecor {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.topLeft {
+  top: -40px;
+  left: -40px;
+  background: radial-gradient(circle at center, 
+    rgba(200, 190, 170, 0.6), 
+    rgba(220, 210, 190, 0.4) 50%, 
+    transparent 70%);
+  border-radius: 50%;
+  filter: blur(25px);
+}
+
+.bottomRight {
+  bottom: -40px;
+  right: -40px;
+  background: radial-gradient(circle at center, 
+    rgba(170, 165, 155, 0.6), 
+    rgba(190, 185, 175, 0.4) 50%, 
+    transparent 70%);
+  border-radius: 50%;
+  filter: blur(25px);
+}
+
+/* Decorative line on container side */
+.formContainer::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  right: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+    transparent, 
+    rgba(180, 170, 150, 0.4), 
+    transparent);
+  border-radius: 3px;
+}
+
+/* Form subtitle styling */
+.formSubtitle {
+  font-family: "AssistantR", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0 0 2rem;
+  color: #7a756f;
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+}
+
+/* Form styling */
+.form {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input group styling */
+.inputGroup {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input field styling with cream and gray theme */
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid rgba(180, 170, 150, 0.3);
+  direction: rtl;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  color: #5d5850;
+  font-family: "AssistantR", sans-serif;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+  text-align: right;
+  box-shadow: 
+    0 2px 8px rgba(150, 140, 120, 0.08), 
+    inset 0 1px 3px rgba(180, 170, 150, 0.05);
+  box-sizing: border-box;
+}
+
+/* Disabled input styling */
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: rgba(245, 242, 235, 0.7);
+  border-color: rgba(180, 170, 150, 0.2);
+}
+
+.input::placeholder {
+  color: rgba(138, 133, 128, 0.6);
+  transition: color 0.25s ease;
+  text-align: right;
+}
+
+.input:focus {
+  border-color: #a6a090;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 0 12px rgba(180, 170, 150, 0.2), 
+    inset 0 1px 3px rgba(150, 140, 120, 0.05);
+}
+
+.input:focus::placeholder {
+  color: rgba(138, 133, 128, 0.4);
+}
+
+/* Submit button with elegant gray styling */
+.submitButton {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.1rem;
+  width: 100%;
+  color: #ffffff;
+  background: linear-gradient(135deg, 
+    #8a8580 0%, 
+    #7a756f 30%, 
+    #6d6960 70%, 
+    #625d56 100%);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  direction: rtl;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 
+      0 4px 15px rgba(120, 115, 110, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+/* Loading button styling */
+.submitButton.loading {
+  cursor: not-allowed;
+  opacity: 0.8;
+  background: linear-gradient(135deg, 
+    #a39e98 0%, 
+    #958f89 30%, 
+    #87827c 70%, 
+    #7a756f 100%);
+  animation: loading-pulse 1.5s infinite;
+}
+
+.submitButton.loading::before {
+  animation: none;
+}
+
+/* Loading pulse animation */
+@keyframes loading-pulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.01);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+/* Disabled button */
+.submitButton:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Normal button hover effects */
+.submitButton:not(.loading):hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, 
+    #958f89 0%, 
+    #87827c 30%, 
+    #7a756f 70%, 
+    #6d6960 100%);
+  box-shadow: 
+      0 6px 20px rgba(120, 115, 110, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.submitButton:not(.loading):active {
+  transform: translateY(0);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtle shimmer effect for button */
+.submitButton:not(.loading)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, 
+      rgba(255, 255, 255, 0) 20%, 
+      rgba(255, 255, 255, 0.2) 50%, 
+      rgba(255, 255, 255, 0) 80%);
+  transform: translateX(-100%) skewX(-15deg);
+  transition: all 0.8s ease;
+}
+
+.submitButton:not(.loading):hover::before {
+  transform: translateX(100%) skewX(-15deg);
+}
+
+/* Limited notice styling */
+.limitedNotice {
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  color: #8a8580;
+  font-style: italic;
+  text-align: center;
+  opacity: 0.85;
+  font-family: "AssistantR", sans-serif;
+  letter-spacing: 0.5px;
+  padding: 0 1rem;
+}
+
+/* Animations */
+@keyframes formAppear {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%) scale(0.98);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Gentle glow for decorative elements */
+@keyframes glowPulse {
+  0% {
+    opacity: 0.3;
+    filter: blur(15px);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(20px);
+  }
+  100% {
+    opacity: 0.3;
+    filter: blur(15px);
+  }
+}
+
+.formDecor {
+  animation: glowPulse 6s infinite alternate;
+}
+
+/* ========== Responsiveness ========== */
+/* Below 350px */
+@media screen and (max-width: 349px) {
+  .popped {
+    width: 90%;
+    max-width: none;
+  }
+  
+  .formContainer {
+    width: 100%;
+    max-width: none;
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+  }
+  
+  .formSubtitle {
+    font-size: 1rem;
+    margin: 0 0 1.5rem;
+  }
+  
+  .input {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+  
+  .submitButton {
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+  
+  .limitedNotice {
+    font-size: 0.75rem;
+  }
+  
+  .formDecor {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .topLeft {
+    top: -30px;
+    left: -30px;
+  }
+  
+  .bottomRight {
+    bottom: -30px;
+    right: -30px;
+  }
+}
+
+/* 350px - 450px */
+@media screen and (min-width: 350px) and (max-width: 450px) {
+  .popped {
+    width: 90%;
+    max-width: none;
+  }
+  
+  .formContainer {
+    width: 100%;
+    max-width: none;
+    padding: 1.8rem 1.2rem;
+    border-radius: 1.2rem;
+  }
+  
+  .formSubtitle {
+    font-size: 1.1rem;
+    margin: 0 0 1.7rem;
+  }
+  
+  .input {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+  
+  .submitButton {
+    font-size: 1rem;
+    padding: 13px 22px;
+  }
+  
+  .formDecor {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* 450px - 550px */
+@media screen and (min-width: 451px) and (max-width: 550px) {
+  .popped {
+    width: 90%;
+    max-width: none;
+  }
+  
+  .formContainer {
+    width: 100%;
+    max-width: none;
+    padding: 2rem 1.5rem;
+  }
+  
+  .formSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .formDecor {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* 550px - 650px */
+@media screen and (min-width: 551px) and (max-width: 650px) {
+  .popped {
+    width: 90%;
+    max-width: 480px;
+  }
+  
+  .formContainer {
+    width: 100%;
+    padding: 2.2rem 2rem 2.2rem 1.8rem;
+  }
+  
+  .formSubtitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* Additional hover effects for cream theme */
+.formContainer:hover {
+  box-shadow: 
+      0 20px 40px rgba(120, 120, 120, 0.18),
+      0 8px 20px rgba(100, 100, 100, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      inset 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+/* Smooth focus transitions for inputs */
+.input:hover:not(:focus) {
+  border-color: rgba(180, 170, 150, 0.5);
+  box-shadow: 
+    0 3px 10px rgba(150, 140, 120, 0.12), 
+    inset 0 1px 3px rgba(180, 170, 150, 0.08);
+}
